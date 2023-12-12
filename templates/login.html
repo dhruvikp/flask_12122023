@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Login </h1>
+
+    <br/>
+
+    {% if error == 'True' %}
+        <div> Wrong Username and password! </div>
+    {% endif %}
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages  %}
+                    <li> {{message}} </li>
+                {% endfor %}
+            </ul>
+        
+        {% endif %}
+    
+    {% endwith %}
+
+    <form action="/authenticate" method="post">
+        Username : <input type="text" name="username" id="username" /> <br/>
+        Password : <input type="password" name="password" id="password" /> <br/>
+
+        <button type="submit"> Login </button>
+    </form>
+
+</body>
+</html>
