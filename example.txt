@@ -1,1 +1,18 @@
-Hello Simplilearn!
+blueprints
+
+App.py  
+    
+    Owners
+        forms.py
+        views.py
+        templates
+
+    Puppies
+        forms.py
+        views.py
+        templates
+
+    Books
+        forms.py
+        views.py
+        templates
